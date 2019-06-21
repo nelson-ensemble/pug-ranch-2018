@@ -1,11 +1,11 @@
-import { DOMRegistry } from 'react-dom-components';
-import TabControlDOM from './components/tabControl/TabControlDOM';
-import { TabItemDOM } from './components/tabItem/TabItemDOM';
+import React from "react";
+import { render } from "react-dom";
+import { DOMRegistry } from "react-dom-components";
 
-const tabControl = new TabControlDOM();
-const tabItem = new TabItemDOM();
+import tabControlRDC from "./components/tabControl/TabControlRDC";
+import tabItemRDC from "./components/tabItem/TabItemRDC";
+import helloWorldRDC from "./components/helloworld/helloWorldRDC";
 
-new DOMRegistry([
-    tabControl,
-    tabItem,
-]);
+const domRegistry = new DOMRegistry(React, render);
+domRegistry.register({ helloWorldRDC, tabControlRDC, tabItemRDC });
+domRegistry.init(document); // init defaults to `document` if not no param is defined

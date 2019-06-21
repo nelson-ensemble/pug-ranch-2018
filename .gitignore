@@ -78,3 +78,8 @@ buildNumber.properties
 ### Node ###
 node_modules
 .vscode
+ui\.apps/src/main/content/jcr_root/apps/pugranch/clientlibs/publish/dist/js/app\.min\.js
+
+ui\.apps/node/
+
+ui\.apps/package-lock\.json

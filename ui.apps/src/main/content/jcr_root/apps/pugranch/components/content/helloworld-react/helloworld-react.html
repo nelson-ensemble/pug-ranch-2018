@@ -1,0 +1,10 @@
+<p data-sly-test="${properties.text}">Text property: ${properties.text}</p>
+
+<hello-world
+  data-sly-use.hello="org.millr.core.models.HelloWorldModel"
+  data-model="${'{0}.model.json' @ format = resource.path}"
+  data-name="My Name"
+  data-title="My Title"
+>
+  ${properties.text}
+</hello-world>

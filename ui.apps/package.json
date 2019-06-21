@@ -1,42 +1,44 @@
 {
-    "name": "pug-ranch-2018",
-    "version": "0.0.1",
-    "description": "A sample implementation of React DOM Components on AEM",
-    "main": "src/main/content/jcr_root/apps/pugranch/clientlibs/publish/src/app.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "webpack",
-        "build-production": "NODE_ENV=production npm run build",
-        "aemlibs": "webpack --watch",
-        "aemsync": "aemsync -w src/main/content/jcr_root"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:auniverseaway/pug-ranch-2018.git"
-    },
-    "author": "Chris Millar",
-    "license": "Apache-2.0",
-    "dependencies": {
-        "@babel/core": "^7.0.0-beta.39",
-        "@babel/preset-env": "^7.0.0-beta.39",
-        "@babel/preset-react": "^7.0.0-beta.39",
-        "@babel/preset-stage-0": "^7.0.0-beta.39",
-        "babel-core": "^7.0.0-bridge.0",
-        "babel-eslint": "^7.2.3",
-        "babel-loader": "^8.0.0-beta.0",
-        "prop-types": "^15.6.0",
-        "react": "^16.2.0",
-        "react-dom": "^16.2.0",
-        "react-dom-components": "0.1.0",
-        "shortid": "^2.2.8",
-        "webpack": "^3.10.0"
-    },
-    "devDependencies": {
-        "aemsync": "^1.1.1",
-        "eslint": "^4.16.0",
-        "eslint-config-airbnb": "^16.1.0",
-        "eslint-plugin-import": "^2.8.0",
-        "eslint-plugin-jsx-a11y": "^6.0.3",
-        "eslint-plugin-react": "^7.5.1"
-    }
+  "name": "pug-ranch-2018",
+  "version": "0.0.1",
+  "description": "A sample implementation of React DOM Components on AEM",
+  "main": "src/main/content/jcr_root/apps/pugranch/clientlibs/publish/src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -d --env dev",
+    "build-production": "NODE_ENV=production npm run build",
+    "aemlibs": "webpack -d --env dev --watch",
+    "aemsync": "aemsync -w src/main/content/jcr_root",
+    "update:packages": "node wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:auniverseaway/pug-ranch-2018.git"
+  },
+  "author": "Chris Millar",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-0": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-dom-components": "3.0.0",
+    "shortid": "^2.2.14",
+    "webpack": "^4.35.0"
+  },
+  "devDependencies": {
+    "aemsync": "^4.0.0-rc1",
+    "eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jsx-a11y": "*",
+    "eslint-plugin-react": "*",
+    "webpack-cli": "^3.3.4"
+  }
 }
